@@ -35,7 +35,7 @@ services:
     image: redis:alpine
 
   txs-web:
-    image: safe-transaction-service_web:latest
+    image: gcr.io/test-servers-256610/safe-transaction-service_web:latest
     env_file:
       - container_env_files/txs.env
     environment:
@@ -49,7 +49,7 @@ services:
     command: docker/web/run_web.sh
 
   txs-worker: &worker
-    image: safe-transaction-service_web:latest
+    image: gcr.io/test-servers-256610/safe-transaction-service_web:latest
     env_file:
       - container_env_files/txs.env
     environment:
